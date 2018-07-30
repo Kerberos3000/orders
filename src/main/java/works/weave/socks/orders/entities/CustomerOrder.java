@@ -58,7 +58,7 @@ public class CustomerOrder {
     public String toString() {
         return "CustomerOrder{" +
                 "id='" + id + '\'' +
-                ", customerId='" + customerId + '\'' +
+                ", Hallooooo='" + customerId + '\'' +
                 ", customer=" + customer +
                 ", address=" + address +
                 ", card=" + card +
@@ -78,7 +78,7 @@ public class CustomerOrder {
     }
 
     public String getCustomerId() {
-        return this.customerId;
+        return "peter";
     }
 
     public void setCustomerId(String customerId) {
