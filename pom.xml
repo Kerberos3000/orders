@@ -21,6 +21,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
         <prometheus.version>0.0.21</prometheus.version>
+        <sonar.projectName>Orders</sonar.projectName>
+        <sonar.projectKey>Orders</sonar.projectKey>
     </properties>
 
     <dependencies>
