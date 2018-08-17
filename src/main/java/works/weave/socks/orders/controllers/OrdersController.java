@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import works.weave.socks.orders.config.OrdersConfigurationProperties;
+import works.weave.socks.orders.entities.CustomerOrder;
 import works.weave.socks.orders.entities.Item;
 import works.weave.socks.orders.repositories.CustomerOrderRepository;
 import works.weave.socks.orders.services.AsyncGetService;
@@ -35,6 +36,12 @@ public class OrdersController {
 	@PostMapping("/amount")
 	public @ResponseBody String postAmount(@RequestBody List<Item> items) {
 		return Float.toString(calculateTotal(items));
+	}
+
+	@PostMapping("/save")
+	public @ResponseBody CustomerOrder postSaveOrder(@RequestBody CustomerOrder order) {
+		CustomerOrder savedOrder = customerOrderRepository.save(order);
+		return savedOrder;
 	}
 
 	private float calculateTotal(List<Item> items) {
