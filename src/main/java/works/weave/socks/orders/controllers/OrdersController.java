@@ -10,12 +10,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-
 import works.weave.socks.orders.config.OrdersConfigurationProperties;
 import works.weave.socks.orders.entities.CustomerOrder;
 import works.weave.socks.orders.entities.Item;
 import works.weave.socks.orders.repositories.CustomerOrderRepository;
-import works.weave.socks.orders.services.AsyncGetService;
 
 @RestController
 public class OrdersController {
@@ -23,9 +21,6 @@ public class OrdersController {
 
 	@Autowired
 	private OrdersConfigurationProperties config;
-
-	@Autowired
-	private AsyncGetService asyncGetService;
 
 	@Autowired
 	private CustomerOrderRepository customerOrderRepository;
