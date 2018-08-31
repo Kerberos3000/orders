@@ -41,3 +41,10 @@ Try the following:
 3. build again 
 
 It seems to be important that you manually create the target directory and not the script.
+
+
+
+## Analyse
+```
+mvn sonar:sonar
+```
